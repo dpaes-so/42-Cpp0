@@ -19,6 +19,7 @@ class contacts
         void add_nickname(std::string str);
         void add_number(std::string str);
         void add_secret(std::string str);
+        void print_all();
 };
 
 class phonebook
