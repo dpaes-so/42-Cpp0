@@ -3,21 +3,22 @@
 int main(int ac,char *av[])
 {
     phonebook book;
+    std::string line;
     (void)av;
     if(ac == 1)
     {
         book.last_added = -1;
         while(true)
         {
-            std::string line;
-            std::cout << "Choose one option:" << std::endl;
-            std::getline(std::cin,line);
-            if(line == "add")
+            std::cout << "Choose one option:";
+            if (!getline(std::cin, line))
+                break;
+            if(line == "ADD")
                 book.add();
-            else if(line == "search")
+            else if(line == "SEARCH")
                 book.search();
-            else if(line == "exit")
-                return(1);
+            else if(line == "EXIT" || line.empty())
+                return(0);
             else 
                 std::cout << "Unknown option" << std::endl;
         }

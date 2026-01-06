@@ -29,3 +29,23 @@ void contacts::print_all()
     std::cout << phone_number << std::endl;
     std::cout << darkest_secret << std::endl;
 }
+
+void contacts::print_field(std::string str)
+{
+    if (str.length() > 10)
+        std::cout << str.substr(0, 9) << ".";
+    else
+        std::cout << std::setw(10) << str;
+}
+
+void contacts::print_line(int index)
+{
+    std::cout << std::setw(10) << index << "|";
+    print_field(first_name);
+    std::cout << "|";
+    print_field(last_name);
+    std::cout << "|";
+    print_field(nickname);
+    std::cout << std::endl;
+}
+

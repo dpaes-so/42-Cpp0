@@ -19,6 +19,8 @@ class contacts
         void add_nickname(std::string str);
         void add_number(std::string str);
         void add_secret(std::string str);
+        void print_field(std::string str);
+        void print_line(int index);
         void print_all();
 };
 
@@ -27,8 +29,10 @@ class phonebook
     private:
         contacts cont[8];
     public:
+        std::string  handle_input(std::string str);
         void add();
         void search();
         int last_added;
+        int total;
 };
 #endif
