@@ -3,15 +3,14 @@
 std::string phonebook::handle_input(std::string str)
 {
     std::string line;
-    while(true)
+    std::cout << str;
+    while(std::getline(std::cin,line))
     {
-        std::cout << str;
-        std::getline(std::cin,line);
         if(!line.empty())
-        {
             return(line);
-        }
+        std::cout << str;
     }
+    return(line);
 }
 
 void phonebook::add()
@@ -20,23 +19,29 @@ void phonebook::add()
 
     if(last_added < 8)
     {
-        last_added = (last_added + 1) % 8;
-
         line = handle_input("First name: ");
         cont[last_added].add_fname(line);
-
+        if(line.empty())
+            return;
         line = handle_input("Last name: ");
         cont[last_added].add_lname(line);
-
+        if(line.empty())
+            return;
         line = handle_input("Nickname: ");
         cont[last_added].add_nickname(line);
-
+        if(line.empty())
+            return;
         line = handle_input("Number: ");
         cont[last_added].add_number(line);
-
+        if(line.empty())
+            return;
         line = handle_input("Darkest secret: ");
         cont[last_added].add_secret(line);
-
+        if(line.empty())
+            return;
+        last_added++;
+        if(last_added >= 8)
+            last_added = 0;
         if (total < 8)
             total++;
     }
@@ -55,7 +60,7 @@ void phonebook::search()
     std::string input;
     int index;
     std::cout << "Enter index: ";
-    if (!std::getline(std::cin, input))  // handles Ctrl+D
+    if (!std::getline(std::cin, input))
         return;
     if (input.length() != 1 || input[0] < '0' || input[0] > '7')
     {

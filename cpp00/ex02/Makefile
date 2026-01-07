@@ -6,11 +6,11 @@
 #    By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 16:14:56 by dpaes-so          #+#    #+#              #
-#    Updated: 2026/01/07 16:14:57 by dpaes-so         ###   ########.fr        #
+#    Updated: 2026/01/07 16:52:35 by dpaes-so         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp contact_func.cpp phonebook_func.cpp
+SRC = Account.cpp tests.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

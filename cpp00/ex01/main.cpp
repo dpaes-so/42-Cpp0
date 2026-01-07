@@ -7,7 +7,8 @@ int main(int ac,char *av[])
     (void)av;
     if(ac == 1)
     {
-        book.last_added = -1;
+        book.last_added = 0;
+        book.total = 0;
         while(true)
         {
             std::cout << "Choose one option:";
@@ -17,7 +18,7 @@ int main(int ac,char *av[])
                 book.add();
             else if(line == "SEARCH")
                 book.search();
-            else if(line == "EXIT" || line.empty())
+            else if(line == "EXIT")
                 return(0);
             else 
                 std::cout << "Unknown option" << std::endl;

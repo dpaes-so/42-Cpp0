@@ -46,6 +46,7 @@ void contacts::print_line(int index)
     print_field(last_name);
     std::cout << "|";
     print_field(nickname);
+    std::cout << "|";
     std::cout << std::endl;
 }
 
