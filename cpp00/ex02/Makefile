@@ -6,7 +6,7 @@
 #    By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/07 16:14:56 by dpaes-so          #+#    #+#              #
-#    Updated: 2026/01/07 16:52:35 by dpaes-so         ###   ########.fr        #
+#    Updated: 2026/01/08 14:39:30 by dpaes-so         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = phonebook
+NAME = Account
 
 all: $(NAME)
 
