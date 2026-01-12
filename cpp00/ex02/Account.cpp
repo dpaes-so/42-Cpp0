@@ -6,7 +6,7 @@
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/08 14:30:16 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/08 16:53:29 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/01/09 15:36:42 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,29 @@ Account::~Account( void )
     std::cout << "closed" << std::endl;
 }
 
+int Account::getTotalAmount()
+{
+	return (_totalAmount);
+}
+int Account::getNbDeposits()
+{
+	return (_totalNbDeposits);
+}
+
+int Account::getNbAccounts()
+{
+	return (_nbAccounts);
+}
+int Account::getNbWithdrawals()
+{
+	return (_totalNbWithdrawals);
+}
+
 void Account::displayAccountsInfos( void )
 {
     Account::_displayTimestamp();
-    std::cout << "accounts:" << _nbAccounts << ';' << "total:" << _totalAmount << ';' ;
-    std::cout <<"deposits:" << _totalNbDeposits << ';' << "withdrawals:" << _totalNbWithdrawals << std::endl;
+    std::cout << "accounts:" << getNbAccounts() << ';' << "total:" << getTotalAmount() << ';' ;
+    std::cout <<"deposits:" << getNbDeposits() << ';' << "withdrawals:" << getNbWithdrawals() << std::endl;
 }
 
 void Account::displayStatus( void ) const// dosent change the value just reads

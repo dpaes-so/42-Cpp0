@@ -23,11 +23,11 @@ void contacts::add_secret(std::string str)
 
 void contacts::print_all()
 {
-    std::cout << first_name << std::endl;
-    std::cout << last_name << std::endl;
-    std::cout << nickname << std::endl;
-    std::cout << phone_number << std::endl;
-    std::cout << darkest_secret << std::endl;
+    std::cout << "First name: " << first_name << std::endl;
+    std::cout << "Last name: " << last_name << std::endl;
+    std::cout << "Nickname: "<< nickname << std::endl;
+    std::cout << "Phone number: "<< phone_number << std::endl;
+    std::cout << "Darkest secret: "<< darkest_secret << std::endl;
 }
 
 void contacts::print_field(std::string str)
