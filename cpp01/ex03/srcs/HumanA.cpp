@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 13:50:57 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/14 11:48:48 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/01/14 10:57:45 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/01/14 13:37:39 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include "iostream"
-#include <iomanip>
-#include <string>
-#include <cstdlib>
+#include "../includes/HumanA.hpp"
 
-class Weapon
+HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon), name(name)
 {
-    private:
-        std::string type;
-        
-    public:
-        const std::string &getType();
-        void setType(std::string new_type);
-        Weapon( void );
-        Weapon( std::string type);
-        ~Weapon( void );
-};
-#endif
+	std::cout << "HumanA: " << name << " has been Created!!" << std::endl;
+}
+
+HumanA::~HumanA( void )
+{
+    std::cout << "humanA destructor called" << std::endl;
+}
+
+void HumanA::attack( void )
+{
+    std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+}
+

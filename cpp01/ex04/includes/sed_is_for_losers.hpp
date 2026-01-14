@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   sed_is_for_losers.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 13:50:57 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/14 11:48:48 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/01/12 17:07:13 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/01/14 15:12:13 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include "iostream"
-#include <iomanip>
-#include <string>
-#include <cstdlib>
+#ifndef SED_IS_FOR_LOSERS_HPP
+#define SED_IS_FOR_LOSERS_HPP
 
-class Weapon
-{
-    private:
-        std::string type;
-        
-    public:
-        const std::string &getType();
-        void setType(std::string new_type);
-        Weapon( void );
-        Weapon( std::string type);
-        ~Weapon( void );
-};
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream> 
+#include <iterator>
+
 #endif

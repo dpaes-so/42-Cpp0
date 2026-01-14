@@ -6,16 +6,16 @@
 #    By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/12 14:06:50 by dpaes-so          #+#    #+#              #
-#    Updated: 2026/01/14 11:32:24 by dpaes-so         ###   ########.fr        #
+#    Updated: 2026/01/14 15:18:02 by dpaes-so         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Unnecessary_violence
+NAME = Sed_is_for_losers
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp
 SRCS_DIR = srcs
 SRCS =	$(addprefix $(SRCS_DIR)/, $(SRC))
 
@@ -32,7 +32,6 @@ $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(OBJS_DIR)
 $(OBJS_DIR):
 	@echo COMPILING...
 	@mkdir -p $(OBJS_DIR)
-	
 clean:
 	@rm -f $(OBJ)
 	@rm -rf $(OBJS_DIR)

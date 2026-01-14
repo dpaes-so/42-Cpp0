@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 13:50:57 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/14 11:48:48 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/01/14 11:08:00 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/01/14 13:35:13 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include "iostream"
-#include <iomanip>
-#include <string>
-#include <cstdlib>
+#include "../includes/Weapon.hpp"
 
-class Weapon
+Weapon::Weapon(std::string type)
 {
-    private:
-        std::string type;
-        
-    public:
-        const std::string &getType();
-        void setType(std::string new_type);
-        Weapon( void );
-        Weapon( std::string type);
-        ~Weapon( void );
-};
-#endif
+    this->setType(type);
+    std::cout << "Weapon construtor called" << std::endl;
+}
+
+void Weapon::setType(std::string new_type)
+{
+    type = new_type;
+}
+
+const std::string &Weapon::getType( void )
+{
+    return(this->type);
+}
+
+Weapon::~Weapon( void )
+{
+    std::cout << "Weapon destructor called" << std::endl;
+}
