@@ -6,28 +6,20 @@
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:18:07 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/15 16:26:25 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/01/15 15:30:18 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iostream"
-#include <iomanip>
-#include <string>
-#include <cstdlib>
+#include "../includes/Harl.hpp"
 
-
-int main()
+int main(int ac, char *av[])
 {
-    std::string string = "HI THIS IS BRAIN";
-    std::string *stringPTR = &string;
-    std::string &stringREF = string;
-
-    std::cout << "string memory adress: " << &string << std::endl;
-    std::cout << "strPTR memory adress: " << stringPTR << std::endl;
-    std::cout << "string memory adress: " << &stringREF << std::endl;
-
-    std::cout << "string value: " << string << std::endl;
-    std::cout << "strPTR value: " << *stringPTR << std::endl;
-    std::cout << "string value: " << string << std::endl;
-    return(0);
+	if(ac == 2)
+	{
+		harl harl;
+		harl.complain(av[1]);
+	}
+	else
+		std::cout << "Harl alwyas complain about only one thing" << std::endl;
+	return (0);
 }

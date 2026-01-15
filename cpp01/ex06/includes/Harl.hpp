@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/12 13:50:57 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/15 12:09:33 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/01/12 17:07:13 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/01/15 15:04:51 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
-#include "iostream"
-#include <iomanip>
-#include <string>
-#include <cstdlib>
+#ifndef HARL_HPP
+#define HARL_HPP
 
-class Weapon
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream> 
+#include <iterator>
+
+class harl
 {
     private:
-        std::string type;
-        
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
     public:
-        const std::string &getType();
-        void setType(std::string new_type);
-        Weapon( void );
-        Weapon( std::string type);
-        ~Weapon( void );
+        harl();
+        ~harl();
+        void complain( std::string level );
 };
+
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: finn <finn@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:18:07 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/14 19:40:11 by finn             ###   ########.fr       */
+/*   Updated: 2026/01/15 16:43:00 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ int main(int ac,char *av[])
         if (av[2][0] == '\0')
             return 1;
         std::ifstream file(av[1]);
+        if(!file)
+            return(std::cout << "File not found" << std::endl,1);
         std::string out_name = av[1];
-        std::ofstream out(out_name+=".replace");;
+        std::ofstream out(out_name+=".replace");//n criar sen eexistir 
         std::string line;
         size_t len = std::string(av[2]).length();
         while (std::getline(file, line))

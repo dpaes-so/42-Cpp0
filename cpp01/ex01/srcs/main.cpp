@@ -6,7 +6,7 @@
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:50:55 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/01/12 16:04:36 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/01/15 16:23:29 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	Zombie *horde;
-	int N = 10;
+	int N = 0;
 	horde = zombieHorde(N,"");
 	if(horde)
 		delete []horde;
