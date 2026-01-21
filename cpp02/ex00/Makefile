@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: finn <finn@student.42.fr>                  +#+  +:+       +#+         #
+#    By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/12 14:06:50 by dpaes-so          #+#    #+#              #
-#    Updated: 2026/01/19 16:31:07 by finn             ###   ########.fr        #
+#    Updated: 2026/01/21 16:02:54 by dpaes-so         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME): $(OBJ)
 	@$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp | $(OBJS_DIR)
-	@$(CXX) $(CXXLAGS)  -c $< -o $@
+	@$(CXX) $(CXXFLAGS)  -c $< -o $@
 	
 $(OBJS_DIR):
 	@echo COMPILING...

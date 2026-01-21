@@ -15,7 +15,7 @@ Fixed::~Fixed(void )
 
 Fixed &Fixed::operator=(Fixed const &source)
 {
-    // std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &source)
 		this->setRawBits(source.getRawBits());
 	return *this;
@@ -48,7 +48,7 @@ bool Fixed::operator>=(Fixed const &number) const
 bool Fixed::operator<=(Fixed const &number) const
 {
     // std::cout << "Copy assignment operator called" << std::endl;
-    if(this->getRawBits() < number.getRawBits())
+    if(this->getRawBits() <= number.getRawBits())
         return(true);
     return(false);
 }
@@ -64,8 +64,8 @@ bool Fixed::operator==(Fixed const &number) const
 bool Fixed::operator!=(Fixed const &number) const
 {
     // std::cout << "Copy assignment operator called" << std::endl;
-    if(this->getRawBits() == number.getRawBits())
-        return(true);
+    if(this->getRawBits() != number.getRawBits())
+        return(true); 
     return(false);
 }
 
@@ -85,15 +85,15 @@ Fixed Fixed::operator-(Fixed const &number) const
 
 Fixed Fixed::operator*(Fixed const &number) const
 {
-    Fixed result;
-    result.setRawBits(this->getRawBits() * number.getRawBits());
-    return(result);
+    Fixed result;                                                          //2 * 4 = 8
+    result.setRawBits((this->getRawBits() * number.getRawBits()) >> _bits);// (2 * 2) * (2*4) = 4 * 8 = 32
+    return(result);                                                        // 32 /2 = 16 / 2 = 8
 }
 
 Fixed Fixed::operator/(Fixed const &number) const
 {
     Fixed result;
-    result.setRawBits(this->getRawBits() / number.getRawBits());
+    result.setRawBits((this->getRawBits() << _bits)/ number.getRawBits());
     return(result);
 }
 
@@ -114,7 +114,7 @@ Fixed Fixed::operator++(int)//post
 
 Fixed &Fixed::operator--(void)//pre
 {
-    this->_value++;
+    this->_value--;
     return(*this);
 }
 
@@ -123,17 +123,37 @@ Fixed Fixed::operator--(int)//post
     Fixed temp;
 
     temp = *this;
-    this->_value++;
+    this->_value--;
     return(temp);
 }
 
-Fixed Fixed::min(Fixed const &number) const
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
 {
-    if(this->getRawBits() > number.getRawBits())
-        return(true);
-    return(false);
+    if(a < b)
+        return(a);
+    return(b);
 }
 
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
+{
+    if(a > b)
+        return(a);
+    return(b);
+}
+
+Fixed &Fixed::min(Fixed &a, Fixed &b)
+{
+    if(a < b)
+        return(a);
+    return(b);
+}
+
+Fixed &Fixed::max(Fixed &a, Fixed &b)
+{
+    if(a > b)
+        return(a);
+    return(b);
+}
 
 Fixed::Fixed(const int n_value)
 {
@@ -167,7 +187,6 @@ std::ostream &operator<<(std::ostream &stream, Fixed const &src)//return stream 
 Fixed::Fixed(const Fixed &src )
 {
     std::cout << "Copy constructor called" << std::endl;
-    // this->_value = src._value;
     *this = src;
 }
 
