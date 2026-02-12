@@ -35,7 +35,6 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &source)
     std::cout << "Copy assignment operator called" << std::endl;
     if (this != &source)
 	{
-        ClapTrap::operator=(source);
         this->_name = source._name;
         this->_Hit_points = source._Hit_points;
         this->_atack_damage = source._atack_damage;
