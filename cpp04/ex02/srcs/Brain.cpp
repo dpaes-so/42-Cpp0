@@ -1,0 +1,42 @@
+#include "../includes/Brain.hpp"
+
+Brain::Brain()
+{
+    std::cout << "Default constructor called" << std::endl;
+}
+
+Brain::Brain(const Brain &src)
+{
+    std::cout << "Brain copy constructor called" << std::endl;
+    *this = src;
+}
+
+Brain::~Brain()
+{
+    std::cout << "Default destructor called" << std::endl;
+}
+
+Brain &Brain::operator=(Brain const &source)
+{
+    std::cout << "Brain Copy assignment operator called" << std::endl;
+    if (this != &source)
+	{
+        for (int i = 0; i < 100; i++)
+            this->ideas[i] = source.ideas[i];
+    }
+	return *this;
+}
+
+
+void Brain::setIdea(int index, const std::string &idea)
+{
+	if (index >= 0 && index < 100)
+		ideas[index] = idea;
+}
+
+std::string Brain::getIdea(int index) const
+{
+	if (index >= 0 && index < 100)
+		return ideas[index];
+	return "";
+}
