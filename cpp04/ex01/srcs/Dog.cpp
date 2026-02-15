@@ -3,6 +3,7 @@
 Dog::Dog()
 {
     this->brain = new Brain();
+    this->type = "dog";
     std::cout << "Default constructor called" << std::endl;
 }
 
@@ -13,12 +14,16 @@ Dog::Dog(std::string type) : Animal(type)
     std::cout << "set type constructor called (dog)" << std::endl;
 }
 
-Dog::Dog(const Dog &src) : Animal(type)
+Dog::Dog(Dog const &src)
 {
-    std::cout << "copy constructor called" << std::endl;
-    std::cout << "made a copy of <" << src.type << ">" << std ::endl;
-    *this = src;
-    this->brain = src.brain;
+	*this = src;
+	this->brain = new Brain();
+	if (this->brain)
+	{
+		for (int i = 0; i < 100; i++)
+			this->brain->setIdea(i, src.brain->getIdea(i));
+	}
+	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog::~Dog()
