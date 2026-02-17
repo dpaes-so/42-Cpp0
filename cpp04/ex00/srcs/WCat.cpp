@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WCat.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:42:16 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 10:58:39 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/WrongCat.hpp"
 
 WCat::WCat()
@@ -11,7 +23,7 @@ WCat::WCat(std::string type) : WAnimal(type)
     std::cout << "set type constructor called (WCat)" << std::endl;
 }
 
-WCat::WCat(const WCat &src) : WAnimal(type)
+WCat::WCat(const WCat &src) : WAnimal(src)
 {
     std::cout << "copy constructor called" << std::endl;
     std::cout << "made a copy of <" << src.type << ">" << std ::endl;
@@ -20,7 +32,7 @@ WCat::WCat(const WCat &src) : WAnimal(type)
 
 WCat::~WCat()
 {
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default <Wcat> destructor called" << std::endl;
 }
 
 WCat &WCat::operator=(WCat const &source)

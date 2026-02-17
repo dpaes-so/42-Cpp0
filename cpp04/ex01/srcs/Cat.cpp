@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:46:46 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 11:02:24 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Cat.hpp"
 
 Cat::Cat()
 {
     this->type = "Cat";
     this->brain = new Brain();
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (cat)" << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type)
@@ -23,7 +35,7 @@ Cat::Cat(const Cat &source) : Animal(source)
 Cat::~Cat()
 {
     delete this->brain;
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default destructor called (cat)" << std::endl;
 }
 
 Cat &Cat::operator=(Cat const &source)

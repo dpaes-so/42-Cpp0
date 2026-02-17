@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:46:44 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 11:03:52 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Brain.hpp"
 
 Brain::Brain()
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (brain)" << std::endl;
 }
 
 Brain::Brain(const Brain &src)

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:42:18 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 10:58:47 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/WrongAnimal.hpp"
 
 WAnimal::WAnimal()
@@ -8,7 +20,7 @@ WAnimal::WAnimal()
 WAnimal::WAnimal(std::string type)
 {
     this->type = type;
-    std::cout << "set type constructor called" << std::endl;
+    std::cout << "set type constructor called <default Wanimal>" << std::endl;
 }
 
 WAnimal::WAnimal(const WAnimal &src)
@@ -20,7 +32,7 @@ WAnimal::WAnimal(const WAnimal &src)
 
 WAnimal::~WAnimal()
 {
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default <Wanimal> destructor called" << std::endl;
 }
 
 WAnimal &WAnimal::operator=(WAnimal const &source)

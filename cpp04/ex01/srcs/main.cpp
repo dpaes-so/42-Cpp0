@@ -1,30 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:46:50 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 11:12:19 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Cat.hpp"
 #include "../includes/Dog.hpp"
 
 int main()
 {
-    const int size = 10;
-    Animal* animals[size];
+	Animal* animals[4];
+	std::size_t n = sizeof(animals) / sizeof(animals[0]);
 
-    for (int i = 0; i < size; ++i)
-    {
-        if (i < size / 2)
-            animals[i] = new Dog();
-        else
-            animals[i] = new Cat();
-    }
+	for (size_t i = 0; i < n; i++){
+		if (i < n / 2)
+			animals[i] = new Dog;
+		else
+			animals[i] = new Cat;
+	}
 
-    for (int i = 0; i < size; ++i)
-        animals[i]->makeSound();
+	for (size_t i = 0; i < n; i++){
+		if (i < n / 2)
+			animals[i]->makeSound();
+		else
+			animals[i]->makeSound();
+	}
 
-    for (int i = 0; i < size; ++i)
-        delete animals[i];
+	for (std::size_t i = 0; i < n; ++i) {
+		std::cout << "animal[" << i << "] idea[" << i <<"]: " << animals[i] << '\n';
+	}
 
-    Dog original;
-    Dog copy = original;
+	for (size_t i = 0; i < n; i++){
+		delete animals[i];
+	}
 
-    Cat originalCat;
-    Cat copyCat(originalCat);
-
-    return 0;
+	
 }

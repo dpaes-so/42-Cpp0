@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:46:48 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 11:05:51 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Dog.hpp"
 
 Dog::Dog()
 {
     this->brain = new Brain();
     this->type = "Dog";
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (dog)" << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type)
@@ -23,12 +35,12 @@ Dog::Dog(Dog const &src) : Animal(src)
 Dog::~Dog()
 {
     delete this->brain;
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default destructor called (dog)" << std::endl;
 }
 
 Dog &Dog::operator=(Dog const &source)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called " << std::endl;
     if (this != &source)
     {
         this->Animal::operator=(source);

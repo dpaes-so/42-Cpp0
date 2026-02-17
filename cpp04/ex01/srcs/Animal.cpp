@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/17 10:46:42 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/17 11:04:02 by dpaes-so         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/Animal.hpp"
 
 Animal::Animal()
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called <animal>" << std::endl;
 }
 
 Animal::Animal(std::string type)
 {
     this->type = type;
-    std::cout << "set type constructor called" << std::endl;
+    std::cout << "set type constructor called <default animal>" << std::endl;
 }
 
 Animal::Animal(const Animal &src)
@@ -20,7 +32,7 @@ Animal::Animal(const Animal &src)
 
 Animal::~Animal()
 {
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default <Animal> destructor called" << std::endl;
 }
 
 Animal &Animal::operator=(Animal const &source)
