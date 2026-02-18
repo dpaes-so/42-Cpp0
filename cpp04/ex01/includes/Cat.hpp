@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: finn <finn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 10:46:34 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 11:28:33 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:43:57 by finn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ class Cat : public Animal
         Cat &operator=(Cat const &source);
         ~Cat();
 		void makeSound() const;
+        Brain* getBrain() const;
 };
 #endif

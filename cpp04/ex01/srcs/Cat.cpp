@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: finn <finn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 10:46:46 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 11:02:24 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:21:26 by finn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,8 @@ Cat &Cat::operator=(Cat const &source)
 void Cat::makeSound() const
 {
     std::cout << "meow meow" << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return brain;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: finn <finn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 10:46:36 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 11:27:39 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:49:11 by finn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ class Dog : public Animal
         ~Dog();
         void setIdea(int index, const std::string &idea);
 		void makeSound() const;
+        Brain* getBrain() const;
 };
 #endif

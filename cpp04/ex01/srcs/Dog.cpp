@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
+/*   By: finn <finn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/17 10:46:48 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 11:05:51 by dpaes-so         ###   ########.fr       */
+/*   Updated: 2026/02/18 19:49:24 by finn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,8 @@ Dog &Dog::operator=(Dog const &source)
 void Dog::makeSound() const
 {
     std::cout << "BAU BAU" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return brain;
 }
