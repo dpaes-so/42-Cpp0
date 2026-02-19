@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 10:47:24 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 10:47:25 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/02/17 10:46:46 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/19 12:58:35 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Cat::Cat()
 {
     this->type = "Cat";
     this->brain = new Brain();
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (cat)" << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type)
@@ -34,8 +34,8 @@ Cat::Cat(const Cat &source) : Animal(source)
 
 Cat::~Cat()
 {
+    std::cout << "Default destructor called (cat)" << std::endl;
     delete this->brain;
-    std::cout << "Default destructor called" << std::endl;
 }
 
 Cat &Cat::operator=(Cat const &source)
@@ -55,4 +55,8 @@ Cat &Cat::operator=(Cat const &source)
 void Cat::makeSound() const
 {
     std::cout << "meow meow" << std::endl;
+}
+
+Brain* Cat::getBrain() const {
+    return brain;
 }

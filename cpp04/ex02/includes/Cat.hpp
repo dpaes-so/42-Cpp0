@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 10:47:12 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 10:47:13 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/02/17 10:46:34 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/19 12:47:23 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ class Cat : public Animal
         Cat &operator=(Cat const &source);
         ~Cat();
 		void makeSound() const;
+        Brain* getBrain() const;
 };
 #endif

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 10:47:14 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 10:47:15 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/02/17 10:46:36 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/19 12:47:26 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class Dog : public Animal
         Dog(const Dog &src);
         Dog &operator=(Dog const &source);
         ~Dog();
+        void setIdea(int index, const std::string &idea);
 		void makeSound() const;
+        Brain* getBrain() const;
 };
 #endif

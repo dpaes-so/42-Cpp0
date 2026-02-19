@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 10:47:22 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 10:47:23 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/02/17 10:46:44 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/19 12:57:14 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (brain)" << std::endl;
 }
 
 Brain::Brain(const Brain &src)
@@ -25,7 +25,7 @@ Brain::Brain(const Brain &src)
 
 Brain::~Brain()
 {
-    std::cout << "Default destructor called" << std::endl;
+    std::cout << "Default destructor called (brain)" << std::endl;
 }
 
 Brain &Brain::operator=(Brain const &source)

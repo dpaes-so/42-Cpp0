@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dpaes-so <dpaes-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/17 10:47:26 by dpaes-so          #+#    #+#             */
-/*   Updated: 2026/02/17 10:47:27 by dpaes-so         ###   ########.fr       */
+/*   Created: 2026/02/17 10:46:48 by dpaes-so          #+#    #+#             */
+/*   Updated: 2026/02/19 12:59:04 by dpaes-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Dog::Dog()
 {
     this->brain = new Brain();
     this->type = "Dog";
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default constructor called (dog)" << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type)
@@ -28,19 +28,19 @@ Dog::Dog(std::string type) : Animal(type)
 
 Dog::Dog(Dog const &src) : Animal(src)
 {
-    std::cout << "Dog copy constructor called" << std::endl;
     this->brain = new Brain(*src.brain);
+    std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog::~Dog()
 {
+    std::cout << "Default destructor called (dog)" << std::endl;
     delete this->brain;
-    std::cout << "Default destructor called" << std::endl;
 }
 
 Dog &Dog::operator=(Dog const &source)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    std::cout << "Copy assignment operator called " << std::endl;
     if (this != &source)
     {
         this->Animal::operator=(source);
@@ -53,4 +53,8 @@ Dog &Dog::operator=(Dog const &source)
 void Dog::makeSound() const
 {
     std::cout << "BAU BAU" << std::endl;
+}
+
+Brain* Dog::getBrain() const {
+    return brain;
 }
